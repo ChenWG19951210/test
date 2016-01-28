@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+*{ margin:0px; padding:0px;}
+body{ font-family:Verdana, Geneva, sans-serif; font-size:14px;}
+ul{ list-style: none;}
+.top-nav{
+    width: 600px;
+    margin: 60px auto;
+    border: 1px solid #222;
+    background-image: linear-gradient(#444,#111);
+    border-radius: 6px;
+    box-shadow: 0 1px 1px #777;
+}
+.top-nav::before ,.top-nav::after{
+    content: '';
+    display: table;
+}
+.top-nav::after{
+    clear: both;
+}
+ 
+
+.top-nav>li{
+    float: left;
+    border-right: 1px solid #222;
+    box-shadow: 1px 0 0 #444;
+    position: relative;
+}
+
+.top-nav li a{
+    
+    display: block;
+    padding: 12px 30px;
+    line-height: 16px;
+    color:#999;
+    text-decoration: none;
+    text-align: center;
+    font:bold 12px ;
+    text-shadow:0 1px 0 #000;
+
+}
+.top-nav li a:hover{
+    color: #fafafa;
+}
+
+.top-nav2{
+    visibility: hidden;
+    position:absolute;
+    z-index: 1;
+    background-color: #444;
+    background-image: linear-gradient(#444,#111);
+    border-bottom:1px solid #222;
+    box-shadow: 0 -1px 0 rgb(255,255,255,.3);
+    border-radius: 6px;
+    opacity: 0;
+    margin:20px 0 0 0;
+    transition: all .2s ease-in-out;
+}
+
+
+.top-nav li:hover .top-nav2{
+    visibility: visible;
+    opacity: 1;
+    margin: 0;
+} 
+
+.top-nav2 li{
+    
+    border: 0;
+    box-shadow: 0 1px 0 #111,0 2px #666;
+}
+
+.top-nav2 li a{
+    display: block;
+}
+
+.top-nav2 li:first-child>a{border-radius: 6px 6px 0 0;}
+.top-nav2 li:last-child,.top-nav2 li:last-child>a{border-radius:  0 0 6px 6px;}
+.top-nav2 li a:hover{
+    background-color:#0186ba;
+    background-image: linear-geadient(#04acec,#0186ba)
+}
+
+
+.top-nav2 li span{
+    float: right;
+    position: relative;
+}
+
+.top-nav2 li:first-child>a:before{
+    content: "";
+    position: absolute;
+    top: -17px;
+    border:10px solid transparent;
+    border-bottom-color: #444;
+}
+.top-nav2 li:first-child>a:hover:before{border-bottom-color: #0186ba;}
+
+.top-nav3{
+    position: absolute;   
+    z-index: 2;
+    background-image: linear-gradient(#444,#111);
+    margin: 0 0 0 10px;
+    border-radius: 6px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+
+}
+.top-nav2 li:hover > span .top-nav3{
+    visibility: visible;
+    opacity: 1;
+    margin: 0;
+}
+.top-nav3 li:first-child>a:before{
+    border-bottom-color: transparent;
+    border-right-color: rgb(62,62,62);
+    top:10px;
+    left: -18px;
+}
+.top-nav3 li:first-child>a:hover:before{
+     border-bottom-color: transparent;
+    border-right-color: rgb(1,134,186);
+}
+
+
+ </style>
+
+
+<body>
+<div id="nav">
+<ul class="top-nav">
+  <li><a href="#">首页</a></li>
+  <li><a href="#">课程大厅</a></li>
+  <li><a href="#">学习中心</a>
+      <ul class="top-nav2">
+         <li>
+            <span> 
+            <ul class="top-nav3">
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">Html/CSS</a></li><li><a href="#">JavaScript</a></li>
+                <li><a href="#">Html/CSS</a></li>
+            </ul>  
+            </span>
+            <a href="#">视频学习</a>
+         </li>
+         <li><a href="#">实例练习</a></li>
+         <li><a href="#">问与答</a></li>
+     </ul>   
+  
+  </li>
+  <li><a href="#">经典案例</a></li>
+  <li><a href="#">关于我们</a></li>
+</ul>
+</div>
+</body>
+</html>
